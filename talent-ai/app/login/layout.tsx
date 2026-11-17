@@ -1,0 +1,12 @@
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+import { AIProvider } from '@/lib/ai-client';
+
+export const metadata: Metadata = {
+  title: 'Sign in',
+  robots: { index: false, follow: false },
+};
+
+export default function LoginLayout({ children }: { children: ReactNode }) {
+  return <AIProvider>{children}</AIProvider>;
+}
